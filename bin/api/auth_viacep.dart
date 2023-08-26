@@ -5,13 +5,13 @@ import 'package:http/http.dart' as http;
 
 import '../models/modelViaCep.dart';
 
-class Auth {
+class API {
 String? cep;
-  Auth({
+  API({
    this.cep,
   });
 
-Future<CepLocaleModel> authApi(String cepAuth) async {
+Future<CepLocaleModel> getCep(String cepAuth) async {
   cep = cepAuth;
   final body;
   final url = Uri.parse("https://viacep.com.br/ws/$cep/json/"); 

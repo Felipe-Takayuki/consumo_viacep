@@ -1,9 +1,9 @@
-import 'controller/controller.dart';
+import 'api/auth_viacep.dart';
 import 'models/modelViaCep.dart';
 
 Future<void> main() async {
-   Controller viacepController = Controller();
-   CepLocaleModel teste = await viacepController.getVelueApi("17510-090");
+   API viacepController = API();
+   CepLocaleModel teste = await viacepController.getCep("01001-000");
    print(teste.cepLocaleModelToString());
      
 }
